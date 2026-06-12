@@ -1,1 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit Convertulator</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABcSAAAXEgFnn9JSAAAKaWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgMTAuMC1jMDAwIDI1LkcuZDIwZTQ2NiwgMjAyNS8xMi8wOC0yMDo1MDoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI3LjcgKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyNi0wNi0wMlQyMTo1Nzo1OS0wNzowMCIgeG1wOk1vZGlmeURhdGU9IjIwMjYtMDYtMDhUMTg6MTM6NDAtMDc6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjYtMDYtMDhUMTg6MTM6NDAtMDc6MDAiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjY5OTI4NDIzLTY2NTYtNWI0My1iZjA1LTAyNzE4MzEyYWU2NCIgeG1wTU06RG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjBhZGIwNmIzLTRjNmEtOTg0ZS04MmU4LWM0ZmU0NDc2MjhkYSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjI1Njk4OWJmLTcyMWItYmQ0MS1iMTU2LTRmNDE0MWEyNDlkZiIgdGlmZjpPcmllbnRhdGlvbj0iMSIgdGlmZjpYUmVzb2x1dGlvbj0iMTUwMDAwMC8xMDAwMCIgdGlmZjpZUmVzb2x1dGlvbj0iMTUwMDAwMC8xMDAwMCIgdGlmZjpSZXNvbHV0aW9uVW5pdD0iMiIgZXhpZjpDb2xvclNwYWNlPSI2NTUzNSIgZXhpZjpQaXhlbFhEaW1lbnNpb249IjQ4IiBleGlmOlBpeGVsWURpbWVuc2lvbj0iNDgiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjI1Njk4OWJmLTcyMWItYmQ0MS1iMTU2LTRmNDE0MWEyNDlkZiIgc3RFdnQ6d2hlbj0iMjAyNi0wNi0wMlQyMTo1Nzo1OS0wNzowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDI3LjcgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo0ODNiY2QwMy1jNGUxLTc3NGYtYmU1YS03ZWU3MWJhMWZjYzYiIHN0RXZ0OndoZW49IjIwMjYtMDYtMDJUMjI6MTQ6MTAtMDc6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyNy43IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6MTZiY2IxZDgtMjMwOC0zNDRhLThiZWYtNWEwODc2NTI2NWQ2IiBzdEV2dDp3aGVuPSIyMDI2LTA2LTA4VDE4OjEzOjQwLTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjcuNyAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNvbnZlcnRlZCIgc3RFdnQ6cGFyYW1ldGVycz0iZnJvbSBhcHBsaWNhdGlvbi92bmQuYWRvYmUucGhvdG9zaG9wIHRvIGltYWdlL3BuZyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iZGVyaXZlZCIgc3RFdnQ6cGFyYW1ldGVycz0iY29udmVydGVkIGZyb20gYXBwbGljYXRpb24vdm5kLmFkb2JlLnBob3Rvc2hvcCB0byBpbWFnZS9wbmciLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjY5OTI4NDIzLTY2NTYtNWI0My1iZjA1LTAyNzE4MzEyYWU2NCIgc3RFdnQ6d2hlbj0iMjAyNi0wNi0wOFQxODoxMzo0MC0wNzowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDI3LjcgKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDwvcmRmOlNlcT4gPC94bXBNTTpIaXN0b3J5PiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxNmJjYjFkOC0yMzA4LTM0NGEtOGJlZi01YTA4NzY1MjY1ZDYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjU2OTg5YmYtNzIxYi1iZDQxLWIxNTYtNGY0MTQxYTI0OWRmIiBzdFJlZjpvcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6MjU2OTg5YmYtNzIxYi1iZDQxLWIxNTYtNGY0MTQxYTI0OWRmIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+TfTMHAAAA75JREFUaIHtml2IVVUUx39zS0tBJyVjG36AmWgYZKkVGvlFgpJpTGToS9lLUIa97C3aW8reTzmMCBGI+qSlhpaVUX4FhdaDaA8VhoRR28SPeigNdGTBGjgcxjv37HOulwv93mZx1jnrf/ZZa6+173T09vbSztRoc2q0OTXanBptTo02587+jM65yh4QjF8LbGzw8n+BJTa6L7NG731rViAY/0aB4IUhwL5g/NM0SNMEBONfBroTXIcCb7dUQDD+ReB9oCPB/TTQ1TIBwfhngR3AHQnuPwPzbXRXWiIgGD8f+BAYnOD+qwZ/oYhTZQKC8bOA/cBdCe5/AAtsdL8VdaxEQDD+MeCAJmBRLgALbXRnUp5dWkAwfirwGdCZ4P4XsNhGJ4mbZQkgL6W5AoLxE4EvgFEJ7v/opvVdzr5I86inqQKC8WOBr4DRCe7/Ac/b6I7l7M8Ae7QIPAnMaYqAYLwBDgHjEtyvAy/Z6A7m7BLsR8DdGZvs5NUKCMbfq5+NfD5FkfHvFRvd3px99i2KwGLgnsoEBOM7NWEfJo3XbXSyyWV5ok4Fk5K8oBIBwXh5wCfAdNJwNrotOdt04HNgeB2/p0oLCMZLUu3TpU5hg40u5GyPAAcbKL9SptMFBOMHaVmru5R16LHRre8nKMmjkQ34P5AsIBgvDdkO3VhS2Aa8mbNN0fLb6N6RlsTBeGmF3wOWk4as2qs2uuzB04OATFv3FbhPZ+oKbAJWkcanwEobndT8Pibo3nF/QrtRTEAw/h1gNWkcBl6w0clu28c4DX5Mwv2upKzAOtI4Diy10Umf08cYDX584j1/uV0DjXSUi2x0f2dsozVh61aSAfjhdgg4owPJpYxtlCbspJL3/rrZAs4Bc210f+aClzf/UMl7X9OX0DQBEZiXGwVH6A6b2i9lOZCaxI1wUfr33CjYqcFPoxp6BrogVUB/o+Aw7VRnUA3fAkeaIUBK5HM2OimZfQzV5ZYpqgpuNLoPFRUgm1OXje5oLviPB2p7C9INfF+1AGkLVtjo5DPJDhwyXc2jOr6R2aHRi28lIJ/50pCtstHtztgGa/ALqY4fZSfXlS4l4FHgZObv1Ta67bngd+oRSFWc0sG+/NGije6sJuRW6YtsdJtzl7wGLKM6dgJyNHm+kl9oBBvd1TrtdLeeZ76b0B5n+R14C9iVeoMyG9kHerSyBvgp4Rhd/CaWCb7uChT4TWuTrshMPVl7HJis8660FZeBS5qgx3UWPqGFoTQd//+rQYup0ebUaHNqrQ6gLDcBWnvx5UeLHIoAAAAASUVORK5CYII=">
+<style>
+  :root {
+    --blue: #008fff;
+    --blue-dark: #0070cc;
+    --orange: #ff8c00;
+    --red: #c00;
+    --warn: #e87400;
+    --bg-page: #c0c0c0;
+    --bg-cell: #d9d9d9;
+    --bg-input: #404040;
+    --gray-mid: #777;
+    --gray-tab: #aaa;
+    --border: #bbb;
+    --text: #111;
+  }
 
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg-page);
+    font-family: 'Aptos Narrow', 'Calibri', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 24px 16px;
+  }
+
+  .page-wrapper {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .left-panel {
+    display: flex;
+    flex-direction: column;
+    width: 460px;
+    flex-shrink: 0;
+  }
+
+  .version-link {
+    text-align: right;
+    margin-bottom: 3px;
+  }
+  .version-link a {
+    font-size: 11px;
+    font-style: italic;
+    color: var(--gray-mid);
+    text-decoration: none;
+  }
+
+  /* ── INPUT ── */
+  .input-row {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 6px;
+    width: 100%;
+  }
+  .input-row .input-wrapper {
+    display: flex;
+  }
+
+  .btn-input {
+    background: var(--blue);
+    color: #fff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    padding: 4px 14px;
+    cursor: pointer;
+    white-space: nowrap;
+    letter-spacing: 0.03em;
+  }
+  .btn-input:hover, .btn-input:active { background: var(--blue-dark); }
+
+  .input-wrapper {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+  }
+  .input-highlight {
+    position: absolute;
+    inset: 0;
+    padding: 4px 10px;
+    font-family: 'Aptos Narrow', 'Calibri', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: normal;
+    white-space: pre;
+    overflow: hidden;
+    pointer-events: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  .input-highlight .scroll {
+    white-space: pre;
+    will-change: transform;
+  }
+  .input-highlight .op     { color: var(--blue);   font-weight: bold; }
+  .input-highlight .scalar { color: var(--orange); font-weight: bold; }
+
+  .input-field {
+    background: var(--bg-input);
+    color: transparent;          /* highlight layer shows through */
+    caret-color: #fff;
+    font-family: inherit;
+    font-size: 25px;
+    font-weight: normal;
+    border: none;
+    padding: 4px 10px;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    text-align: left;
+    display: block;
+  }
+  .input-field::placeholder { color: #aaa; font-size: 17.5px; }
+
+  /* ── FRACTIONAL ROW ── */
+  .frac-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  .frac-label {
+    font-size: 15px;
+    color: var(--text);
+    white-space: nowrap;
+  }
+  .frac-select {
+    font-family: inherit;
+    font-size: 15px;
+    color: #fff;
+    background: var(--blue);
+    padding: 2px 4px;
+    cursor: pointer;
+  }
+  .frac-error {
+    flex: 1;
+    text-align: right;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* ── TABS ── */
+  .tab-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .tab {
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 14px;
+    cursor: pointer;
+    border: none;
+    background: var(--gray-tab);
+    color: #fff;
+    user-select: none;
+    letter-spacing: 0.04em;
+    margin-right: 5px;
+  }
+  .tab.active { background: var(--blue); }
+  .tab:not(.active):hover { background: #999; }
+
+  .about-link {
+    font-size: 11px;
+    font-style: italic;
+    color: var(--blue);
+    cursor: pointer;
+    padding: 0 4px;
+    user-select: none;
+  }
+  .about-link:hover { color: var(--blue-dark); }
+
+  /* ── CONVERSION TABLES ── */
+  .conv-panel { display: none; }
+  .conv-panel.active { display: block; }
+
+  table { border-collapse: collapse; width: 100%; }
+
+  .conv-table td {
+    border: 1px solid var(--border);
+    padding: 6px 10px;
+    font-size: 15px;
+    background: var(--bg-cell);
+    vertical-align: middle;
+  }
+  .conv-table td.col-conv {
+    color: var(--text);
+    width: 1%;
+    white-space: nowrap;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+  }
+  .conv-table td.col-output {
+    font-weight: bold;
+    color: var(--text);
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+  }
+  .conv-table td.col-output:hover { background: #ccd6e8; }
+
+  /* ── HISTORY ── */
+  .right-panel {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-self: stretch;
+    width: 150px;
+  }
+  .history-header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .btn-clear {
+    background: var(--blue);
+    color: #fff;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: bold;
+    border: none;
+    padding: 3px 14px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn-clear:hover, .btn-clear:active { background: var(--blue-dark); }
+
+  .history-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-top: none;
+    background: var(--bg-cell);
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 0;
+  }
+  .history-item {
+    padding: 3px 10px;
+    font-size: 15px;
+    line-height: 16px;
+    color: var(--text);
+    cursor: pointer;
+    border-bottom: 1px solid var(--border);
+    user-select: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
+    width: 100%;
+  }
+  .history-item:last-child { border-bottom: none; }
+  .history-item:hover { background: #b8cce4; }
+  .history-item:active { background: var(--blue); color: #fff; }
+
+  .history-empty {
+    padding: 6px 10px;
+    font-size: 12px;
+    color: var(--gray-mid);
+    font-style: italic;
+  }
+
+  /* ── ABOUT OVERLAY ── */
+  .about-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(100, 100, 100, 0.72);
+    z-index: 100;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-overlay.visible { display: flex; }
+
+  .about-box {
+    background: var(--bg-cell);
+    border: 1px solid #999;
+    padding: 24px 28px;
+    max-width: 420px;
+    width: 90%;
+    cursor: default;
+    pointer-events: none;
+  }
+  .about-box h2 {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--text);
+    margin-bottom: 10px;
+    letter-spacing: 0.04em;
+  }
+  .about-box p {
+    font-size: 12px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  .about-box p:last-child { margin-bottom: 0; }
+  .about-box a {
+    color: var(--blue);
+    text-decoration: none;
+    font-style: italic;
+  }
+
+  /* ── MOBILE LAYOUT ── */
+  @media (max-width: 640px) {
+    body {
+      padding: 12px 10px;
+    }
+    .page-wrapper {
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+    }
+    .left-panel {
+      width: 100%;
+    }
+    .right-panel {
+      width: 100%;
+      align-self: auto;
+    }
+    .history-list {
+      flex: none;
+      max-height: 220px;
+      min-height: 80px;
+    }
+  }
+
+</style>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+  <div class="left-panel">
+
+    <div class="version-link">
+      <a href="https://www.pyottdesign.com">PyottDesign &ndash; UnitConvertulator v0.019</a>
+    </div>
+
+    <div class="input-row">
+      <button class="btn-input" onclick="doConvert()">INPUT</button>
+      <div class="input-wrapper">
+        <div class="input-highlight" id="inputHighlight"></div>
+        <input class="input-field" id="mainInput" type="text"
+               placeholder="e.g. 18.5mm, 18 1/2in, 1m + 1ft"
+               autocomplete="off" spellcheck="false" />
+      </div>
+    </div>
+
+    <div class="frac-row">
+      <span class="frac-label">FRACTIONAL</span>
+      <select class="frac-select" id="fracRnd" onchange="doConvert()">
+        <option value="2">1/2</option>
+        <option value="4">1/4</option>
+        <option value="8" selected>1/8</option>
+        <option value="16">1/16</option>
+        <option value="32">1/32</option>
+      </select>
+      <span class="frac-error" id="input-error"></span>
+    </div>
+
+    <div class="tab-bar">
+      <div style="display:flex;">
+        <div class="tab active" id="tab-length" onclick="switchTab('length')">LENGTH</div>
+        <div class="tab" id="tab-weight" onclick="switchTab('weight')">WEIGHT</div>
+      </div>
+      <span class="about-link" onclick="showAbout()">About</span>
+    </div>
+
+    <div class="conv-panel active" id="panel-length">
+      <table class="conv-table">
+        <tbody>
+          <tr><td class="col-conv">IN (D)</td><td class="col-output" id="out-inch-dec"  onclick="copyOutput(this)">&mdash;</td></tr>
+          <tr><td class="col-conv">IN (F)</td><td class="col-output" id="out-inch-frac" onclick="copyOutput(this)">&mdash;</td></tr>
+          <tr><td class="col-conv">FT&ndash;IN (F)</td><td class="col-output" id="out-ft-frac" onclick="copyOutput(this)">&mdash;</td></tr>
+          <tr><td class="col-conv">MM</td><td class="col-output" id="out-mm" onclick="copyOutput(this)">&mdash;</td></tr>
+          <tr><td class="col-conv">CM</td><td class="col-output" id="out-cm" onclick="copyOutput(this)">&mdash;</td></tr>
+          <tr><td class="col-conv">M</td><td class="col-output" id="out-m" onclick="copyOutput(this)">&mdash;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="conv-panel" id="panel-weight">
+      <table class="conv-table">
+        <tbody>
+          <tr><td class="col-conv">OZ</td><td class="col-output" id="out-oz" onclick="copyOutput(this)">&mdash;</td></tr>
+          <tr><td class="col-conv">LB</td><td class="col-output" id="out-lb" onclick="copyOutput(this)">&mdash;</td></tr>
+          <tr><td class="col-conv">TN (short)</td><td class="col-output" id="out-tn" onclick="copyOutput(this)">&mdash;</td></tr>
+          <tr><td class="col-conv">G</td><td class="col-output" id="out-g" onclick="copyOutput(this)">&mdash;</td></tr>
+          <tr><td class="col-conv">KG</td><td class="col-output" id="out-kg" onclick="copyOutput(this)">&mdash;</td></tr>
+          <tr><td class="col-conv">MT (metric)</td><td class="col-output" id="out-mt" onclick="copyOutput(this)">&mdash;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="right-panel">
+    <div class="history-header">
+      <button class="btn-clear" onclick="clearHistory()">CLEAR</button>
+    </div>
+    <div class="history-list" id="historyList">
+      <div class="history-empty">No entries yet.</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="about-overlay" id="aboutOverlay" onclick="hideAbout()">
+  <div class="about-box">
+    <h2>UnitConvertulator v0.018</h2>
+    <p>I work in product design for commercial architecture in the US so end up doing a steady stream of annoying unit conversion math. Lots of "how much space is left in the 14' 3 3/8" room if the 62.75in table has 18mm edge brackets on it?" type questions.</p>
+    <p>Constantly switching between dimension converters and calculators was slowly driving me crazy so I made this <strong>hybrid converter/calculator.</strong></p>
+    <p>You can enter basic units and instantly see what they convert to without fussing with a bunch of drop-down menus.</p>
+    <p><strong>Math expressions</strong> are supported using +, &ndash;, *, and / with parentheses grouping using (). Unitless scalar multiplication and division are allowed, so <strong>(1m+1m)*2 is 4m</strong></p>
+    <p>Addition and subtraction values need a unit type as either abbreviation or standard Imperial foot/inches shorthand: <strong>1m + 11' 6 2/3" + 250mm</strong></p>
+    <p><strong>Do not use US architectural shorthand with "-" between feet and inches.</strong> Enter 1' 8" instead of 1'-8".</p>
+    <p><strong>Weights or Lengths</strong> are auto detected and displayed in the correct table.</p>
+    <p>Click on any number in the conversion table to <strong>copy it to the clipboard.</strong></p>
+    <p><a href="https://www.pyottdesign.com" target="_blank">PyottDesign</a></p>
+  </div>
+</div>
+
+<script>
+'use strict';
+
+/* ════════════════════════════════════════════
+   UNIT DEFINITIONS
+   Length base unit: inches. Weight base unit: grams.
+   ════════════════════════════════════════════ */
+
+const LENGTH_TO_INCHES = { inch: 1, 'feet-inch': 1, mm: 1/25.4, cm: 1/2.54, m: 39.3700787 };
+const WEIGHT_TO_GRAMS  = { g: 1, kg: 1000, oz: 28.3495231, lb: 453.59237, tn: 907184.74, mt: 1000000 };
+
+const FT_MARK = "['\u2019`]|ft";
+const IN_MARK = '"|in';
+
+function unitCategory(unit) {
+  if (unit in WEIGHT_TO_GRAMS) return 'weight';
+  if (unit in LENGTH_TO_INCHES) return 'length';
+  return null;
+}
+
+function toBase(parsed) {
+  const { value, unit } = parsed;
+  if (unit in WEIGHT_TO_GRAMS)  return value * WEIGHT_TO_GRAMS[unit];
+  if (unit in LENGTH_TO_INCHES) return value * LENGTH_TO_INCHES[unit];
+  return null;
+}
+
+/* ════════════════════════════════════════════
+   TOKEN PARSING
+   Valid token forms (every number needs a unit, with one
+   exception: fractional inches "x y/z" with the unit suffix):
+     metric:    250mm  3.5cm  1.2m
+     imperial:  18.5"  18in  11'  11ft  11' 6"  11' 6 2/3"  11 6
+     fractions: 3/8"   1 3/8"   (space-separated only, never dash)
+     weight:    1.5kg  32oz  5lb  3tn  2mt  500g
+   ════════════════════════════════════════════ */
+
+const TOKEN_PATTERNS = [
+  { re: /^(\d+(?:\.\d+)?)\s*mm$/i, unit: 'mm',
+    val: m => parseFloat(m[1]) },
+  { re: /^(\d+(?:\.\d+)?)\s*cm$/i, unit: 'cm',
+    val: m => parseFloat(m[1]) },
+  { re: /^(\d+(?:\.\d+)?)\s*m$/i, unit: 'm',
+    val: m => parseFloat(m[1]) },
+
+  { re: new RegExp(`^(\\d+)\\s*(?:${FT_MARK})\\s*(\\d+)(?:\\s+(\\d+)\\s*/\\s*(\\d+))?\\s*(?:${IN_MARK})?$`, 'i'),
+    unit: 'feet-inch',
+    val: m => parseInt(m[1])*12 + parseInt(m[2]) + (m[3] ? parseInt(m[3])/parseInt(m[4]) : 0) },
+
+  { re: new RegExp(`^(\\d+)\\s*(?:${FT_MARK})\\s*(\\d+)\\s*/\\s*(\\d+)\\s*(?:${IN_MARK})?$`, 'i'),
+    unit: 'feet-inch',
+    val: m => parseInt(m[1])*12 + parseInt(m[2])/parseInt(m[3]) },
+
+  { re: new RegExp(`^(\\d+(?:\\.\\d+)?)\\s*(?:${FT_MARK})$`, 'i'),
+    unit: 'feet-inch',
+    val: m => parseFloat(m[1])*12 },
+
+  { re: new RegExp(`^(\\d+)\\s*(?:${FT_MARK})\\s*(\\d+(?:\\.\\d+)?)\\s*(?:${IN_MARK})?$`, 'i'),
+    unit: 'feet-inch',
+    val: m => parseFloat(m[1])*12 + parseFloat(m[2]) },
+
+  { re: /^(\d+)\s+(\d+)$/, unit: 'feet-inch',
+    val: m => parseInt(m[1])*12 + parseInt(m[2]) },
+
+  { re: /^(\d+)\s+(\d+)\s*\/\s*(\d+)\s*(?:"|in)$/i, unit: 'inch',
+    val: m => parseInt(m[1]) + parseInt(m[2])/parseInt(m[3]) },
+
+  { re: /^(\d+)\s*\/\s*(\d+)\s*(?:"|in)$/i, unit: 'inch',
+    val: m => parseInt(m[1])/parseInt(m[2]) },
+
+  { re: /^(\d+(?:\.\d+)?)\s*(?:"|in)$/i, unit: 'inch',
+    val: m => parseFloat(m[1]) },
+
+  { re: /^(\d+(?:\.\d+)?)\s*(?:kilograms?|kg)$/i, unit: 'kg', val: m => parseFloat(m[1]) },
+  { re: /^(\d+(?:\.\d+)?)\s*(?:grams?|g)$/i,      unit: 'g',  val: m => parseFloat(m[1]) },
+  { re: /^(\d+(?:\.\d+)?)\s*(?:ounces?|oz)$/i,    unit: 'oz', val: m => parseFloat(m[1]) },
+  { re: /^(\d+(?:\.\d+)?)\s*(?:pounds?|lbs?|lb)$/i, unit: 'lb', val: m => parseFloat(m[1]) },
+  { re: /^(\d+(?:\.\d+)?)\s*(?:short\s*tons?|tn|st)$/i, unit: 'tn', val: m => parseFloat(m[1]) },
+  { re: /^(\d+(?:\.\d+)?)\s*(?:metric\s*tons?|mt)$/i,   unit: 'mt', val: m => parseFloat(m[1]) },
+];
+
+function parseInput(raw) {
+  raw = raw.trim();
+  if (!raw) return null;
+  for (const p of TOKEN_PATTERNS) {
+    const m = raw.match(p.re);
+    if (m) return { value: p.val(m), unit: p.unit };
+  }
+  return null;
+}
+
+/* ════════════════════════════════════════════
+   FRACTION FORMATTING
+   ════════════════════════════════════════════ */
+
+function gcd(a, b) { return b === 0 ? a : gcd(b, a % b); }
+
+function decimalToFrac(inches, denom) {
+  const whole = Math.floor(inches);
+  const num = Math.round((inches - whole) * denom);
+  if (num === 0) return `${whole}`;
+  if (num === denom) return `${whole + 1}`;
+  const g = gcd(num, denom);
+  const n = num / g, d = denom / g;
+  return whole === 0 ? `${n}/${d}` : `${whole}-${n}/${d}`;
+}
+
+function inchesToInFrac(inches, denom) {
+  return `${decimalToFrac(inches, denom)}"`;
+}
+
+function inchesToFtInFrac(inches, denom) {
+  const ft = Math.floor(inches / 12);
+  return `${ft}' ${decimalToFrac(inches - ft*12, denom)}"`;
+}
+
+/* ════════════════════════════════════════════
+   EXPRESSION LEXER
+   Token stream: num | op | lparen | rparen | unknown
+   A '/' between two digits is a fraction slash (part of a
+   value token); everywhere else it is division.
+   A '-' after a value or ')' is always subtraction.
+   ════════════════════════════════════════════ */
+
+function lex(raw) {
+  const toks = [];
+  const s = raw.trim();
+  let i = 0;
+
+  while (i < s.length) {
+    const ch = s[i];
+
+    if (ch === ' ') { i++; continue; }
+    if (ch === '(') { toks.push({ type: 'lparen' }); i++; continue; }
+    if (ch === ')') { toks.push({ type: 'rparen' }); i++; continue; }
+    if (ch === '+' || ch === '*') { toks.push({ type: 'op', op: ch }); i++; continue; }
+
+    if (ch === '/') {
+      const fracSlash = /\d/.test(s[i-1] || '') && /\d/.test(s[i+1] || '');
+      if (!fracSlash) { toks.push({ type: 'op', op: '/' }); i++; continue; }
+    }
+
+    if (ch === '-') {
+      const prev = toks[toks.length - 1];
+      const afterValue = prev && (prev.type === 'num' || prev.type === 'rparen' || prev.type === 'unknown');
+      const spaced = s[i-1] === ' ' && s[i+1] === ' ';
+      if (afterValue || spaced) { toks.push({ type: 'op', op: '-' }); i++; continue; }
+    }
+
+    // Collect a value token
+    let j = i, tok = '';
+    while (j < s.length && !'()'.includes(s[j])) {
+      const c = s[j];
+      if (c === '+' || c === '*') break;
+      if (c === '-' && tok.trim()) break;
+      if (c === '/') {
+        const fracSlash = /\d$/.test(tok.trim()) && /\d/.test(s[j+1] || '');
+        if (!fracSlash) break;
+      }
+      tok += c; j++;
+    }
+    tok = tok.trim();
+    if (!tok) { i = j; continue; }
+
+    const parsed = parseInput(tok);
+    if (parsed) {
+      toks.push({
+        type: 'num',
+        value: toBase(parsed),
+        scalar: parsed.value,
+        category: unitCategory(parsed.unit),
+      });
+    } else {
+      toks.push({ type: 'unknown', raw: tok });
+    }
+    i = j;
+  }
+  return toks;
+}
+
+/* ════════════════════════════════════════════
+   RECURSIVE DESCENT PARSER
+     expr   = term  (('+'|'-') term)*     units must match
+     term   = factor (('*'|'/') factor)*  scalars allowed
+     factor = '(' expr ')' | num | unitless-number
+   For * and /, a unit-bearing right operand contributes its
+   raw scalar value, preserving the left side's unit:
+   (1m + 1m) * 2  =  4m
+   ════════════════════════════════════════════ */
+
+function parseExpr(toks, pos) {
+  let { val, cat, pos: p, error } = parseTerm(toks, pos);
+  if (error) return { error };
+
+  while (p < toks.length && toks[p].type === 'op' && '+-'.includes(toks[p].op)) {
+    const op = toks[p].op;
+    const right = parseTerm(toks, p + 1);
+    if (right.error) return right;
+    if (cat === null || right.cat === null) return { error: 'Please include unit' };
+    if (cat !== right.cat) return { error: 'Unit mismatch' };
+    val = op === '+' ? val + right.val : val - right.val;
+    p = right.pos;
+  }
+  return { val, cat, pos: p };
+}
+
+function parseTerm(toks, pos) {
+  let { val, scalar, cat, pos: p, error } = parseFactor(toks, pos);
+  if (error) return { error };
+
+  while (p < toks.length && toks[p].type === 'op' && '*/'.includes(toks[p].op)) {
+    const op = toks[p].op;
+    const right = parseFactor(toks, p + 1);
+    if (right.error) return right;
+
+    const rScalar = right.scalar ?? right.val;
+    if (op === '/' && rScalar === 0) return { error: 'Division by zero' };
+
+    if (cat === null && right.cat !== null) {
+      // scalar OP unit → adopt the unit
+      if (op === '/') return { error: 'Please include unit' };
+      val = (scalar ?? val) * right.val;
+      cat = right.cat;
+      scalar = undefined;
+    } else {
+      // unit OP anything, or scalar OP scalar → right side acts as scalar
+      val = op === '*' ? val * rScalar : val / rScalar;
+      if (cat === null) scalar = val;
+    }
+    p = right.pos;
+  }
+  return { val, scalar, cat, pos: p };
+}
+
+function parseFactor(toks, pos) {
+  if (pos >= toks.length) return { error: 'Input error' };
+  const tok = toks[pos];
+
+  if (tok.type === 'lparen') {
+    const inner = parseExpr(toks, pos + 1);
+    if (inner.error) return inner;
+    if (toks[inner.pos]?.type !== 'rparen') return { error: 'Input error' };
+    return { val: inner.val, cat: inner.cat, pos: inner.pos + 1 };
+  }
+  if (tok.type === 'num') {
+    return { val: tok.value, scalar: tok.scalar, cat: tok.category, pos: pos + 1 };
+  }
+  if (tok.type === 'unknown' && /^\d+(\.\d+)?$/.test(tok.raw)) {
+    // Unitless scalar — valid only inside * and / (enforced by parseExpr/parseTerm)
+    const n = parseFloat(tok.raw);
+    return { val: n, scalar: n, cat: null, pos: pos + 1 };
+  }
+  return { error: 'Input error' };
+}
+
+function hasArchitecturalDash(raw) {
+  return /\d\s*(?:['\u2019`]|ft)\s*-\s*\d/i.test(raw);
+}
+
+function evaluateExpression(raw) {
+  if (!raw.trim()) return { error: 'Input error' };
+
+  const toks = lex(raw);
+  if (!toks.length) return { error: 'Input error' };
+  if (toks.some(t => t.type === 'unknown' && !/^\d+(\.\d+)?$/.test(t.raw))) {
+    return { error: 'Input error' };
+  }
+
+  const result = parseExpr(toks, 0);
+  if (result.error) return { error: result.error };
+  if (result.pos !== toks.length) return { error: 'Input error' };
+  if (result.cat === null) return { error: 'Please include unit' };
+
+  return {
+    total: result.val,
+    category: result.cat,
+    warning: hasArchitecturalDash(raw) ? '"-" is subtracting, not a dash!' : null,
+  };
+}
+
+/* ════════════════════════════════════════════
+   OUTPUT
+   ════════════════════════════════════════════ */
+
+function set(id, val) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = val;
+}
+
+const ALL_OUTPUT_IDS = [
+  'out-inch-dec','out-inch-frac','out-ft-frac','out-mm','out-cm','out-m',
+  'out-oz','out-lb','out-tn','out-g','out-kg','out-mt',
+];
+
+function resetOutputs() {
+  ALL_OUTPUT_IDS.forEach(id => set(id, '\u2014'));
+}
+
+function showError(msg, color = 'var(--red)') {
+  const el = document.getElementById('input-error');
+  if (el) { el.textContent = msg; el.style.color = color; }
+}
+
+function clearError() {
+  const el = document.getElementById('input-error');
+  if (el) { el.textContent = ''; el.style.color = ''; }
+}
+
+function fmt(n, decimals) {
+  return parseFloat(n.toFixed(decimals));
+}
+
+function renderLength(totalInches, denom) {
+  switchTab('length');
+  set('out-inch-dec',  `${fmt(totalInches, 6)}"`);
+  set('out-inch-frac', inchesToInFrac(totalInches, denom));
+  set('out-ft-frac',   inchesToFtInFrac(totalInches, denom));
+  set('out-mm',        `${fmt(totalInches * 25.4, 4)} mm`);
+  set('out-cm',        `${fmt(totalInches * 2.54, 4)} cm`);
+  set('out-m',         `${fmt(totalInches * 0.0254, 6)} m`);
+}
+
+function renderWeight(totalGrams) {
+  switchTab('weight');
+  const lb = totalGrams / 453.59237;
+  set('out-g',  `${fmt(totalGrams, 4)} g`);
+  set('out-kg', `${fmt(totalGrams / 1000, 6)} kg`);
+  set('out-oz', `${fmt(lb * 16, 4)} oz`);
+  set('out-lb', `${fmt(lb, 4)} lb`);
+  set('out-tn', `${fmt(lb / 2000, 8)} tn`);
+  set('out-mt', `${fmt(totalGrams / 1000000, 8)} mt`);
+}
+
+function doConvert(options = {}) {
+  const raw = mainInput.value.trim();
+
+  if (!raw) {
+    resetOutputs();
+    clearError();
+    return;
+  }
+
+  const denom = parseInt(document.getElementById('fracRnd').value);
+  const { total, category, error, warning } = evaluateExpression(raw);
+
+  if (error) {
+    resetOutputs();
+    showError(error);
+    return;
+  }
+
+  if (warning) showError(warning, 'var(--warn)');
+  else clearError();
+
+  if (options.addToHistory !== false) addHistory(raw);
+
+  if (category === 'weight') renderWeight(total);
+  else renderLength(total, denom);
+}
+
+/* ════════════════════════════════════════════
+   TABS / ABOUT / CLIPBOARD
+   ════════════════════════════════════════════ */
+
+function switchTab(tab) {
+  ['length', 'weight'].forEach(t => {
+    document.getElementById('tab-' + t).classList.toggle('active', t === tab);
+    document.getElementById('panel-' + t).classList.toggle('active', t === tab);
+  });
+}
+
+function showAbout() { document.getElementById('aboutOverlay').classList.add('visible'); }
+function hideAbout() { document.getElementById('aboutOverlay').classList.remove('visible'); }
+
+function copyOutput(el) {
+  const text = el.textContent;
+  if (!text || text === '\u2014') return;
+
+  const showCopied = () => {
+    showError('Selection copied to clipboard', 'var(--blue)');
+    setTimeout(clearError, 2000);
+  };
+
+  if (navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(text).then(showCopied).catch(() => {
+      fallbackCopy(text);
+      showCopied();
+    });
+  } else {
+    fallbackCopy(text);
+    showCopied();
+  }
+}
+
+function fallbackCopy(text) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.cssText = 'position:fixed;opacity:0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); } catch (e) {}
+  document.body.removeChild(ta);
+}
+
+/* ════════════════════════════════════════════
+   HISTORY
+   ════════════════════════════════════════════ */
+
+let history = [];
+
+function addHistory(val) {
+  if (history.includes(val)) return;
+  history.unshift(val);
+  if (history.length > 10) history.length = 10;
+  renderHistory();
+}
+
+function clearHistory() {
+  history = [];
+  renderHistory();
+}
+
+function renderHistory() {
+  const list = document.getElementById('historyList');
+  list.innerHTML = '';
+
+  if (history.length === 0) {
+    const e = document.createElement('div');
+    e.className = 'history-empty';
+    e.textContent = 'No entries yet.';
+    list.appendChild(e);
+    return;
+  }
+
+  history.forEach(val => {
+    const div = document.createElement('div');
+    div.className = 'history-item';
+    div.textContent = val;
+    div.title = val;
+    div.addEventListener('click', () => {
+      mainInput.value = val;
+      updateHighlight();
+      doConvert();
+    });
+    list.appendChild(div);
+  });
+}
+
+/* ════════════════════════════════════════════
+   INPUT HIGHLIGHTING
+   +  -  *  (  )  always blue.
+   /  blue, except the fraction slash in "x y/z" + unit.
+   Unitless numbers adjacent to * or /  → orange scalars.
+   ════════════════════════════════════════════ */
+
+const mainInput = document.getElementById('mainInput');
+const inputHighlight = document.getElementById('inputHighlight');
+
+function escapeHtml(ch) {
+  return ch === '&' ? '&amp;' : ch === '<' ? '&lt;' : ch === '>' ? '&gt;' : ch;
+}
+
+function isUnitlessScalarAt(text, start, end) {
+  if (!/^\d+(?:\.\d+)?$/.test(text.slice(start, end))) return false;
+
+  const before = start > 0 ? text[start - 1] : '';
+  const after = end < text.length ? text[end] : '';
+  if (/[\d.\/a-zA-Z'"\u2019`]/.test(before) || /[\d.\/a-zA-Z'"\u2019`]/.test(after)) return false;
+
+  let b = start - 1;
+  while (b >= 0 && text[b] === ' ') b--;
+  let a = end;
+  while (a < text.length && text[a] === ' ') a++;
+
+  return (b >= 0 && '*/'.includes(text[b])) || (a < text.length && '*/'.includes(text[a]));
+}
+
+function isFractionSlash(text, i) {
+  if (!/\d/.test(text[i-1] || '') || !/\d/.test(text[i+1] || '')) return false;
+
+  let j = i + 1;
+  while (j < text.length && /\d/.test(text[j])) j++;
+  if (!/^\s*(?:"|in\b)/i.test(text.slice(j))) return false;
+
+  let k = i - 1;
+  while (k >= 0 && /\d/.test(text[k])) k--;
+  return k < 0 || text[k] === ' ';
+}
+
+function updateHighlight() {
+  const text = mainInput.value;
+  let html = '';
+
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+
+    if (/\d/.test(ch)) {
+      let j = i;
+      while (j < text.length && /[\d.]/.test(text[j])) j++;
+      if (isUnitlessScalarAt(text, i, j)) {
+        html += `<span class="scalar">${text.slice(i, j)}</span>`;
+        i = j - 1;
+        continue;
+      }
+    }
+
+    if ('+-*()'.includes(ch)) {
+      html += `<span class="op">${ch}</span>`;
+    } else if (ch === '/') {
+      html += isFractionSlash(text, i) ? '/' : '<span class="op">/</span>';
+    } else {
+      html += escapeHtml(ch);
+    }
+  }
+
+  inputHighlight.innerHTML = `<span class="scroll">${html}</span>`;
+  syncHighlightScroll();
+}
+
+function syncHighlightScroll() {
+  const scrollEl = inputHighlight.firstElementChild;
+  if (scrollEl) scrollEl.style.transform = `translateX(${-mainInput.scrollLeft}px)`;
+}
+
+/* ════════════════════════════════════════════
+   EVENTS
+   ════════════════════════════════════════════ */
+
+let liveConvertTimer = null;
+
+mainInput.addEventListener('input', () => {
+  updateHighlight();
+  clearTimeout(liveConvertTimer);
+  liveConvertTimer = setTimeout(() => doConvert({ addToHistory: false }), 120);
+});
+
+mainInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    doConvert();
+  }
+});
+
+// Keep the highlight overlay aligned while the input scrolls
+// (typing past the edge, arrow keys, drag-selection, etc.)
+mainInput.addEventListener('scroll', syncHighlightScroll);
+mainInput.addEventListener('select', syncHighlightScroll);
+mainInput.addEventListener('mouseup', syncHighlightScroll);
+mainInput.addEventListener('keyup', syncHighlightScroll);
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') hideAbout();
+});
+</script>
+
+</body>
+</html>
